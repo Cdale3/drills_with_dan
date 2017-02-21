@@ -7,7 +7,7 @@ require './lib/person'
 class BankTest < Minitest::Test
 
   def test_bank_exists
-    bank = Bank.new
+    bank = Bank.new("chase")
     assert_instance_of Bank, bank
   end
 
@@ -39,6 +39,7 @@ class BankTest < Minitest::Test
   end
 
   def test_cant_open_account
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     message = "Not enough galleon to open account."
@@ -46,6 +47,7 @@ class BankTest < Minitest::Test
   end
 
   def test_how_much_money_in_bank_over_all_accounts
+    skip
     chase = Bank.new("Chase")
     person1 = Person.new("Minerva", 1000)
     person2 = Person.new("Bob", 1000)
@@ -57,6 +59,7 @@ class BankTest < Minitest::Test
   end
 
   def test_putting_money_in_bank_takes_away_from_galleon
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     message = "Not enough galleon to open account."
@@ -65,6 +68,7 @@ class BankTest < Minitest::Test
   end
 
   def test_can_deposit_galleon_to_account
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -75,6 +79,7 @@ class BankTest < Minitest::Test
   end
 
   def test_cant_deposit_galleon_to_account_if_person_doesnt_have_enough
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -84,6 +89,7 @@ class BankTest < Minitest::Test
   end
 
   def test_customer_can_withdraw_money_from_account
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -93,6 +99,7 @@ class BankTest < Minitest::Test
   end
 
   def test_cant_withdrawl
+    skip
     chase = Bank.new("Chase")
     person = Person.new("Minerva", 1000)
     chase.open_account(person, 1000)
@@ -102,6 +109,7 @@ class BankTest < Minitest::Test
   end
 
   def test_can_transfer_galleon_to_other_account
+    skip
     chase = Bank.new("Chase")
     wells_fargo = Bank.new("Wells Fargo")
     person = Person.new("Minerva", 2500)

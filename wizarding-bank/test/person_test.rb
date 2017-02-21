@@ -6,7 +6,7 @@ require './lib/person'
 class PersonTest < Minitest::Test
 
   def test_can_create_person
-    person = Person.new
+    person = Person.new("Minerva")
     assert_instance_of Person, person
   end
 
